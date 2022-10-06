@@ -25,15 +25,15 @@ class PhoneBook {
   }
 
   //util func
-  int _findAccountIndex(int pnum) {
-    int x = this.contacts.indexWhere((c) => c.phone_num == pnum);
+  int _findAccountIndex(int num) {
+    int x = this.contacts.indexWhere((c) => c.phone_num == num);
     return x;
   }
 
-  void remove_contact(int pnum) {
+  void remove_contact(int num) {
     print(
-        '-----------------  REMOVED CONTACT SUCCESSFULLY: ${pnum} -----------------');
-    int ret = _findAccountIndex(pnum);
+        '-----------------  REMOVED CONTACT SUCCESSFULLY: ${num} -----------------');
+    int ret = _findAccountIndex(num);
     if (ret == -1) {
       print('Account not found');
     } else {
@@ -41,9 +41,9 @@ class PhoneBook {
     }
   }
 
-  void search_contact(int pnum) {
-    print('----------------- CONTACT FOUND: ${pnum} -----------------');
-    int ret = _findAccountIndex(pnum);
+  void search_contact(int num) {
+    print('----------------- CONTACT FOUND: ${num} -----------------');
+    int ret = _findAccountIndex(num);
     if (ret == -1) {
       print('Account not found');
     } else {
